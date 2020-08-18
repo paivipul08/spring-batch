@@ -1,0 +1,26 @@
+2020-08-02 14:47:43.769  INFO 38448 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 38448 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-02 14:47:43.774  INFO 38448 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-02 14:47:45.062  INFO 38448 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-02 14:47:48.331  INFO 38448 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-02 14:47:48.564  INFO 38448 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-02 14:47:48.921  INFO 38448 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-02 14:47:49.103  INFO 38448 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 5.889 seconds (JVM running for 6.562)
+2020-08-02 14:47:49.106  INFO 38448 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-02 14:47:49.512  INFO 38448 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=deliverPackageJob]] launched with the following parameters: [{}]
+2020-08-02 14:47:49.671  INFO 38448 --- [main] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=packageItemStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
+2020-08-02 14:47:49.721  INFO 38448 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=deliverPackageJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 139ms
+2020-08-02 14:47:49.729  INFO 38448 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-02 14:47:49.747  INFO 38448 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-02 14:48:24.390  INFO 36516 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 36516 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-02 14:48:24.395  INFO 36516 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-02 14:48:25.677  INFO 36516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-02 14:48:28.961  INFO 36516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-02 14:48:29.079  INFO 36516 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-02 14:48:29.408  INFO 36516 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-02 14:48:29.713  INFO 36516 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 5.9 seconds (JVM running for 6.529)
+2020-08-02 14:48:29.717  INFO 36516 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-02 14:48:30.034  INFO 36516 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=deliverPackageJob]] launched with the following parameters: [{}]
+2020-08-02 14:48:30.233  INFO 36516 --- [main] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=1, version=3, name=packageItemStep, status=COMPLETED, exitStatus=COMPLETED, readCount=0, filterCount=0, writeCount=0 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=1, rollbackCount=0, exitDescription=
+2020-08-02 14:48:30.276  INFO 36516 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=deliverPackageJob]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 165ms
+2020-08-02 14:48:30.297  INFO 36516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-02 14:48:30.345  INFO 36516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

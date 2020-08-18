@@ -1,0 +1,286 @@
+2020-08-10 11:55:42.283  INFO 7544 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 7544 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 11:55:42.294  INFO 7544 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 11:55:43.997  INFO 7544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 11:55:46.465  INFO 7544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 11:55:46.594  WARN 7544 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chunckBasedJdbcPagingOrderStep' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'chunckBasedJdbcPagingOrderStep' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderValidatingProcessor' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+2020-08-10 11:55:46.595  INFO 7544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 11:55:46.625  INFO 7544 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 11:55:46.637  INFO 7544 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-10 11:55:46.660 ERROR 7544 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'chunckBasedJdbcPagingOrderStep' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'chunckBasedJdbcPagingOrderStep' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderValidatingProcessor' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at com.example.batch.SpringBatchApplication.main(SpringBatchApplication.java:292) [main/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.core.Step]: Factory method 'chunckBasedJdbcPagingOrderStep' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderValidatingProcessor' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderValidatingProcessor' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:362) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:334) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3.orderValidatingProcessor(<generated>) ~[main/:na]
+	at com.example.batch.SpringBatchApplication.chunckBasedJdbcPagingOrderStep(SpringBatchApplication.java:263) [main/:na]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3.CGLIB$chunckBasedJdbcPagingOrderStep$0(<generated>) ~[main/:na]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3$$FastClassBySpringCGLIB$$5ab679cc.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3.chunckBasedJdbcPagingOrderStep(<generated>) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_211]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 20 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 43 common frames omitted
+Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:206) ~[hibernate-validator-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.<init>(ResourceBundleMessageInterpolator.java:94) ~[hibernate-validator-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.validator.internal.engine.AbstractConfigurationImpl.getDefaultMessageInterpolator(AbstractConfigurationImpl.java:570) ~[hibernate-validator-6.1.5.Final.jar:6.1.5.Final]
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:273) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.batch.item.validator.BeanValidatingItemProcessor.<init>(BeanValidatingItemProcessor.java:43) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at com.example.batch.SpringBatchApplication.orderValidatingProcessor(SpringBatchApplication.java:277) [main/:na]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3.CGLIB$orderValidatingProcessor$1(<generated>) ~[main/:na]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3$$FastClassBySpringCGLIB$$5ab679cc.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$ac206bd3.orderValidatingProcessor(<generated>) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_211]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 44 common frames omitted
+
+2020-08-10 11:57:02.800  INFO 8348 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 8348 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 11:57:02.804  INFO 8348 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 11:57:03.690  WARN 8348 --- [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderValidatingProcessor' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+2020-08-10 11:57:03.700  INFO 8348 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-08-10 11:57:03.713 ERROR 8348 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderValidatingProcessor' defined in com.example.batch.SpringBatchApplication: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:483) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at com.example.batch.SpringBatchApplication.main(SpringBatchApplication.java:294) [main/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.batch.item.ItemProcessor]: Factory method 'orderValidatingProcessor' threw exception; nested exception is javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 19 common frames omitted
+Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.buildExpressionFactory(ResourceBundleMessageInterpolator.java:206) ~[hibernate-validator-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.validator.messageinterpolation.ResourceBundleMessageInterpolator.<init>(ResourceBundleMessageInterpolator.java:94) ~[hibernate-validator-6.1.5.Final.jar:6.1.5.Final]
+	at org.hibernate.validator.internal.engine.AbstractConfigurationImpl.getDefaultMessageInterpolator(AbstractConfigurationImpl.java:570) ~[hibernate-validator-6.1.5.Final.jar:6.1.5.Final]
+	at org.springframework.validation.beanvalidation.LocalValidatorFactoryBean.afterPropertiesSet(LocalValidatorFactoryBean.java:273) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.batch.item.validator.BeanValidatingItemProcessor.<init>(BeanValidatingItemProcessor.java:43) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at com.example.batch.SpringBatchApplication.orderValidatingProcessor(SpringBatchApplication.java:153) [main/:na]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$1ee38d57.CGLIB$orderValidatingProcessor$5(<generated>) ~[main/:na]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$1ee38d57$$FastClassBySpringCGLIB$$a17cdf41.invoke(<generated>) ~[main/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.example.batch.SpringBatchApplication$$EnhancerBySpringCGLIB$$1ee38d57.orderValidatingProcessor(<generated>) ~[main/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_211]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	... 20 common frames omitted
+
+2020-08-10 12:04:29.814  INFO 10680 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 10680 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 12:04:29.818  INFO 10680 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 12:04:30.672  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 12:04:32.253  INFO 10680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 12:04:33.481  INFO 10680 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-10 12:04:33.576  INFO 10680 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-10 12:04:33.703  INFO 10680 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 4.361 seconds (JVM running for 6.499)
+2020-08-10 12:04:33.705  INFO 10680 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-10 12:04:34.575  INFO 10680 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] launched with the following parameters: [{}]
+2020-08-10 12:04:34.698  INFO 10680 --- [main] o.s.batch.core.job.SimpleStepHandler     : Step already complete or not restartable, so no action to execute: StepExecution: id=4, version=103, name=chunckBasedJdbcPagingOrderStep, status=COMPLETED, exitStatus=COMPLETED, readCount=1000, filterCount=0, writeCount=1000 readSkipCount=0, writeSkipCount=0, processSkipCount=0, commitCount=101, rollbackCount=0, exitDescription=
+2020-08-10 12:04:34.740  INFO 10680 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 110ms
+2020-08-10 12:04:34.750  INFO 10680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 12:04:34.760  INFO 10680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 12:05:31.408  INFO 8696 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 8696 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 12:05:31.411  INFO 8696 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 12:05:32.275  INFO 8696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 12:05:33.930  INFO 8696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 12:05:34.187  INFO 8696 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-10 12:05:34.317  INFO 8696 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-10 12:05:34.455  INFO 8696 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 3.492 seconds (JVM running for 5.669)
+2020-08-10 12:05:34.459  INFO 8696 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-10 12:05:35.622  INFO 8696 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] launched with the following parameters: [{}]
+2020-08-10 12:05:35.996  INFO 8696 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [chunckBasedJdbcPagingOrderStepNew]
+2020-08-10 12:05:44.436  INFO 8696 --- [main] o.s.batch.core.step.AbstractStep         : Step: [chunckBasedJdbcPagingOrderStepNew] executed in 8s439ms
+2020-08-10 12:05:44.709  INFO 8696 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 9s16ms
+2020-08-10 12:05:44.728  INFO 8696 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 12:05:44.745  INFO 8696 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 12:23:43.693  INFO 9460 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 9460 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 12:23:43.696  INFO 9460 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 12:23:44.521  INFO 9460 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 12:23:46.107  INFO 9460 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 12:23:46.525  INFO 9460 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-10 12:23:46.613  INFO 9460 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-10 12:23:46.728  INFO 9460 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 3.606 seconds (JVM running for 5.532)
+2020-08-10 12:23:46.731  INFO 9460 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-10 12:23:47.006  INFO 9460 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] launched with the following parameters: [{}]
+2020-08-10 12:23:47.167  INFO 9460 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [chunckBasedJdbcPagingOrderCustomProcessorStep]
+2020-08-10 12:23:50.101  INFO 9460 --- [main] o.s.batch.core.step.AbstractStep         : Step: [chunckBasedJdbcPagingOrderCustomProcessorStep] executed in 2s932ms
+2020-08-10 12:23:50.172  INFO 9460 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 3s111ms
+2020-08-10 12:23:50.180  INFO 9460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 12:23:50.188  INFO 9460 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 12:34:36.156  INFO 12600 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 12600 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 12:34:36.176  INFO 12600 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 12:34:37.037  INFO 12600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 12:34:39.249  INFO 12600 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 12:34:39.725  INFO 12600 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-10 12:34:39.811  INFO 12600 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-10 12:34:39.920  INFO 12600 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 4.619 seconds (JVM running for 6.809)
+2020-08-10 12:34:39.923  INFO 12600 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-10 12:34:40.434  INFO 12600 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] launched with the following parameters: [{}]
+2020-08-10 12:34:40.616  INFO 12600 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [chunckBasedJdbcPagingOrderCustomProcessorStepNew]
+2020-08-10 12:34:44.228  INFO 12600 --- [main] o.s.batch.core.step.AbstractStep         : Step: [chunckBasedJdbcPagingOrderCustomProcessorStepNew] executed in 3s611ms
+2020-08-10 12:34:44.277  INFO 12600 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 3s810ms
+2020-08-10 12:34:44.286  INFO 12600 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 12:34:44.297  INFO 12600 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 12:44:22.890  INFO 8188 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 8188 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 12:44:22.914  INFO 8188 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 12:44:23.880  INFO 8188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 12:44:25.433  INFO 8188 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 12:44:25.719  INFO 8188 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-10 12:44:25.802  INFO 8188 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-10 12:44:25.905  INFO 8188 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 3.554 seconds (JVM running for 5.604)
+2020-08-10 12:44:25.908  INFO 8188 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-10 12:44:26.277  INFO 8188 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] launched with the following parameters: [{}]
+2020-08-10 12:44:26.410  INFO 8188 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [chunckBasedJdbcPagingOrderCompositeProcessorStepNew]
+2020-08-10 12:44:30.015  INFO 8188 --- [main] o.s.batch.core.step.AbstractStep         : Step: [chunckBasedJdbcPagingOrderCompositeProcessorStepNew] executed in 3s604ms
+2020-08-10 12:44:30.103  INFO 8188 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] completed with the following parameters: [{}] and the following status: [COMPLETED] in 3s773ms
+2020-08-10 12:44:30.121  INFO 8188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 12:44:30.132  INFO 8188 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-08-10 12:58:53.184  INFO 12436 --- [main] c.example.batch.SpringBatchApplication   : Starting SpringBatchApplication on STSLP167 with PID 12436 (D:\demo-workspace\spring-batch\bin\main started by vipul.pai in D:\demo-workspace\spring-batch)
+2020-08-10 12:58:53.208  INFO 12436 --- [main] c.example.batch.SpringBatchApplication   : No active profile set, falling back to default profiles: default
+2020-08-10 12:58:54.073  INFO 12436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-10 12:58:55.651  INFO 12436 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-10 12:58:55.982  INFO 12436 --- [main] o.s.b.c.r.s.JobRepositoryFactoryBean     : No database type set, using meta data indicating: MYSQL
+2020-08-10 12:58:56.068  INFO 12436 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : No TaskExecutor has been set, defaulting to synchronous executor.
+2020-08-10 12:58:56.182  INFO 12436 --- [main] c.example.batch.SpringBatchApplication   : Started SpringBatchApplication in 3.475 seconds (JVM running for 5.413)
+2020-08-10 12:58:56.185  INFO 12436 --- [main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2020-08-10 12:58:56.426  INFO 12436 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] launched with the following parameters: [{}]
+2020-08-10 12:58:56.566  INFO 12436 --- [main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [chunckBasedJdbcPagingOrderCompositeProcessorStepNew1]
+2020-08-10 12:58:57.714 ERROR 12436 --- [main] o.s.batch.core.step.AbstractStep         : Encountered an error executing step chunckBasedJdbcPagingOrderCompositeProcessorStepNew1 in job job
+
+org.springframework.batch.core.step.skip.SkipLimitExceededException: Skip limit of '5' exceeded
+	at org.springframework.batch.core.step.skip.LimitCheckingItemSkipPolicy.shouldSkip(LimitCheckingItemSkipPolicy.java:133) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.skip.ExceptionClassifierSkipPolicy.shouldSkip(ExceptionClassifierSkipPolicy.java:70) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.shouldSkip(FaultTolerantChunkProcessor.java:519) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.access$500(FaultTolerantChunkProcessor.java:56) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor$2.recover(FaultTolerantChunkProcessor.java:289) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.retry.support.RetryTemplate.handleRetryExhausted(RetryTemplate.java:512) ~[spring-retry-1.2.5.RELEASE.jar:na]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:351) ~[spring-retry-1.2.5.RELEASE.jar:na]
+	at org.springframework.retry.support.RetryTemplate.execute(RetryTemplate.java:211) ~[spring-retry-1.2.5.RELEASE.jar:na]
+	at org.springframework.batch.core.step.item.BatchRetryTemplate.execute(BatchRetryTemplate.java:217) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor.transform(FaultTolerantChunkProcessor.java:308) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.process(SimpleChunkProcessor.java:210) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.ChunkOrientedTasklet.execute(ChunkOrientedTasklet.java:77) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:407) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$ChunkTransactionCallback.doInTransaction(TaskletStep.java:331) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.transaction.support.TransactionTemplate.execute(TransactionTemplate.java:140) ~[spring-tx-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.batch.core.step.tasklet.TaskletStep$2.doInChunkContext(TaskletStep.java:273) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.scope.context.StepContextRepeatCallback.doInIteration(StepContextRepeatCallback.java:82) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.repeat.support.RepeatTemplate.getNextResult(RepeatTemplate.java:375) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.repeat.support.RepeatTemplate.executeInternal(RepeatTemplate.java:215) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.repeat.support.RepeatTemplate.iterate(RepeatTemplate.java:145) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.tasklet.TaskletStep.doExecute(TaskletStep.java:258) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.AbstractStep.execute(AbstractStep.java:208) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.job.SimpleStepHandler.handleStep(SimpleStepHandler.java:148) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.job.AbstractJob.handleStep(AbstractJob.java:410) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.job.SimpleJob.doExecute(SimpleJob.java:136) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.job.AbstractJob.execute(AbstractJob.java:319) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher$1.run(SimpleJobLauncher.java:147) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.core.task.SyncTaskExecutor.execute(SyncTaskExecutor.java:50) [spring-core-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.batch.core.launch.support.SimpleJobLauncher.run(SimpleJobLauncher.java:140) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_211]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:1.8.0_211]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[na:1.8.0_211]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.batch.core.configuration.annotation.SimpleBatchConfiguration$PassthruAdvice.invoke(SimpleBatchConfiguration.java:127) [spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212) [spring-aop-5.2.8.RELEASE.jar:5.2.8.RELEASE]
+	at com.sun.proxy.$Proxy42.run(Unknown Source) [na:na]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.execute(JobLauncherApplicationRunner.java:199) [spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.executeLocalJobs(JobLauncherApplicationRunner.java:173) [spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.launchJobFromProperties(JobLauncherApplicationRunner.java:160) [spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:155) [spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.autoconfigure.batch.JobLauncherApplicationRunner.run(JobLauncherApplicationRunner.java:150) [spring-boot-autoconfigure-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:786) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.2.RELEASE.jar:2.3.2.RELEASE]
+	at com.example.batch.SpringBatchApplication.main(SpringBatchApplication.java:339) [main/:na]
+Caused by: com.example.batch.OrderProcessingException: null
+	at com.example.batch.CustomValidatingProcessor.getTrackingNumber(CustomValidatingProcessor.java:18) ~[main/:na]
+	at com.example.batch.CustomValidatingProcessor.process(CustomValidatingProcessor.java:12) ~[main/:na]
+	at com.example.batch.CustomValidatingProcessor.process(CustomValidatingProcessor.java:1) ~[main/:na]
+	at org.springframework.batch.item.support.CompositeItemProcessor.processItem(CompositeItemProcessor.java:63) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.item.support.CompositeItemProcessor.process(CompositeItemProcessor.java:52) ~[spring-batch-infrastructure-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.SimpleChunkProcessor.doProcess(SimpleChunkProcessor.java:134) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.batch.core.step.item.FaultTolerantChunkProcessor$1.doWithRetry(FaultTolerantChunkProcessor.java:239) ~[spring-batch-core-4.2.4.RELEASE.jar:4.2.4.RELEASE]
+	at org.springframework.retry.support.RetryTemplate.doExecute(RetryTemplate.java:287) ~[spring-retry-1.2.5.RELEASE.jar:na]
+	... 44 common frames omitted
+
+2020-08-10 12:58:57.718  INFO 12436 --- [main] o.s.batch.core.step.AbstractStep         : Step: [chunckBasedJdbcPagingOrderCompositeProcessorStepNew1] executed in 1s151ms
+2020-08-10 12:58:57.745  INFO 12436 --- [main] o.s.b.c.l.support.SimpleJobLauncher      : Job: [SimpleJob: [name=job]] completed with the following parameters: [{}] and the following status: [FAILED] in 1s282ms
+2020-08-10 12:58:57.752  INFO 12436 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-08-10 12:58:57.758  INFO 12436 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
